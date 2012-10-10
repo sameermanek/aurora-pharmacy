@@ -1,11 +1,15 @@
-set(fab_user='backupserverp',
-       fab_hosts=['maneks.net'],
-       root='/home/backupserverp/aurora-pharmacy.com',
-       site='aurora-pharmacy.com')
+from fabric.api import run, local, put, sudo, env
+from fabric.context_managers import cd
 
-  def deploy():
-      local("git archive --format=tar HEAD | gzip > $(site).tar.gz")
-      run("rm -rf $(root)$(site)")
-      put("$(site).tar.gz', '$(root)$(site).tar.gz")
-      run("cd $(root)$(site)")
-      run("tar zxf $(site).tar.gz")
+env.user = 'backupserverp'
+env.hosts = ['maneks.net']
+env.root = '/home/backupserverp/'
+env.site = 'aurora-pharmacy.com'
+
+def deploy():
+  local("git archive --format=tar HEAD | gzip > %s.tar.gz" % env.site)
+  put("%s.tar.gz" % env.site, "%s%s.tar.gz" % (env.root, env.site))
+  run("rm -rf %s%s/*" % (env.root, env.site))
+  with cd("%s%s" % (env.root, env.site)):
+    run("tar zxf %s%s.tar.gz" % (env.root, env.site))
+  
