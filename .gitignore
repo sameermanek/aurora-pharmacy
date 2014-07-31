@@ -1,2 +1,4 @@
 aurora-pharmacy.com.tar.gz
 *.pyc
+*.komodoproject
+*.komodotools
