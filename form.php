@@ -1,15 +1,6 @@
 
 <?php
-function cleanInput($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
 
-function inputExists($data) {
-    return !is_null($data) && trim($data) != "";
-}
 ?>
 
 <h2>Send a message to the pharmacist</h2>
