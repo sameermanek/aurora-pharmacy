@@ -15,7 +15,7 @@ include_once "header.php";
   <div class="row-fluid">
     <div class="col-md-8 col-md-offset-2 centered">
         <h2>Contact Information</h2>
-      <table class="table-striped">
+      <table class="table-striped" width=100%>
         <tr><td><p class="lead">Phone</p></td><td><a href="tel:+16308203360">(630) 820-3360</a></td></tr>
         <tr><td><p class="lead">Fax</p></td><td><a href="tel:+16308206864">(630) 820-6864</a></td></tr>
         <tr><td><p class="lead">Email</p></td><td><a href="mailto:contact@maneks.net">contact@maneks.net</a></td></tr>
