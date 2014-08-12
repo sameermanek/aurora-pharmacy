@@ -13,25 +13,26 @@ include_once "header.php";
 
 <div class="container">
   <div class="row-fluid">
-    <div class="col-lg-6 col-offset-3 centered">
+    <div class="col-lg-4 col-lg-offset-4 centered">
         <form role="form">
+            <input type="text" id="username" placeholder="username">
+                <?php //fake username input to help catch bots (rather than using captcha)
+                ?>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Your name">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
             <div class="form-group">
-              <label for="exampleInputFile">File input</label>
-              <input type="file" id="exampleInputFile">
-              <p class="help-block">Example block-level help text here.</p>
+                <label for="phone number">Phone Number</label>
+                <input type="tel" id="phone" placeholder="phone number">
             </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Check me out
-              </label>
+            <div class="form-group">
+                <label for="message">Message?</label>
+                <textarea id="message" placeholder="Type your question here"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
