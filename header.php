@@ -51,7 +51,12 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Aurora Pharmacy</a>
+          <a class="navbar-brand" href="../">Aurora Pharmacy</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../contact.php" <?php if($_SERVER['PHP_SELF'] == 'contact.php') echo 'class="active"'; ?> >Contact Us</a></li>
+            </ul>
         </div>
       </div>
     </div>
