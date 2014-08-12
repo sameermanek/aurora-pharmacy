@@ -60,9 +60,11 @@ include_once "header.php";
           $strHeaders = "From: contact@maneks.net\n";
           if(inputExists($_POST['email'])) $strHeaders .= "Reply-To: " . $_POST['email'] . "\n";
           
-          mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
+          $blnSuccess = mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
           
-          echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>';
+          if($blnSuccess) echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>'; else echo '<div class="alert alert-info" role="alert"> Something failed.</div>';
+          
+        
           
           
         } else {
