@@ -27,37 +27,26 @@ include_once "header.php";
   </div>
   <div class="row-fluid">
     <div class="col-md-8 col-md-offset-2 centered">
-        <h2>Send a message to the pharmacist</h2>
-        <form role="form">
-            <div class="form-group">
-            <input type="text" id="username" placeholder="username" hidden="true">
-                <?php //fake username input to help catch bots (rather than using captcha)
-                ?>
-            </div>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" placeholder="Your name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label for="phone number">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" placeholder="phone number">
-            </div>
-            <div class="form-group">
-                <label for="message">Message?</label>
-                <br />
-                <textarea class="form-control" rows="5" id="message" placeholder="Type your question here"></textarea>
-            </div>
-            <p class="help-block">
-                Messages sent via this form are not encrypted.<br />
-                They are sent to the pharmacist as an email.<br />
-                Please call or stop by if you need to discuss any confidential or medically sensitive information with the pharmacist.
-            </p>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
+
+        <?php
+        $blnAttempted = $_SERVER["REQUEST_METHOD"] == "POST";
+        //count(array_intersect(array_keys($_POST), array('name','email','phone','message'))) !== 0;
+      
+        // handle the form -- if it is good send emails, otherwise fill in whatever possible and flag error
+        if(isset($_POST['username'])) {
+          //shut it down
+          echo '<div class="alert alert-success" role="alert"><h2>Thanks [spammer]</h2><br />You should hear back soon</div>';
+
+        } elseif(isset($_POST['name']) && (isset($_POST['email']) || isset($_POST['phone'])) && isset($_POST['message'])) {
+          // do stuff. Send email, spit out 'thanks' message
+          echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>';
+        } else {
+          // return the form w/ notes where there's missing information iff attempted
+          include_once "form.php"; // uses $_POST and $blnAttempted
+        }
+        ?>
+
+        
     </div>
   </div> <!-- /row -->
 </div> <!-- /container -->
