@@ -17,12 +17,12 @@
     </div>
     <div class="form-group">
       <label for="email">Email address</label>
-      <?php echo ($blnAttempted && !inputExists($_POST['email']) && !inputExists($_POST['phone']) ? '<div class="alert alert-info">Either email or phone number is required</div>' : ""); ?>
+      <?php echo ($blnAttempted && !inputExists($_POST['email']) && !inputExists($_POST['phone']) ? '<div class="alert alert-warning">Either email or phone number is required</div>' : ""); ?>
       <input type="email" class="form-control" name="email" placeholder="Your email address" value="<?php echo ($blnAttempted && inputExists($_POST['email']) ? cleanInput($_POST['email']) : ""); ?>">
     </div>
     <div class="form-group">
       <label for="phone number">Phone</label>
-      <?php echo ($blnAttempted && !inputExists($_POST['email']) && !inputExists($_POST['phone']) ? '<div class="alert alert-info">Either email or phone number is required</div>' : ""); ?>
+      <?php echo ($blnAttempted && !inputExists($_POST['email']) && !inputExists($_POST['phone']) ? '<div class="alert alert-warning">Either email or phone number is required</div>' : ""); ?>
       <input type="tel" class="form-control" name="phone" placeholder="Your phone number" value="<?php echo ($blnAttempted && inputExists($_POST['phone']) ? cleanInput($_POST['phone']) : ""); ?>">
     </div>
     <div class="form-group">
