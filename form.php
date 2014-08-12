@@ -1,6 +1,7 @@
 
 <?php
 
+// need to (slightly) validate the email and phone number.
 ?>
 
 <h2>Send a message to the pharmacist</h2>

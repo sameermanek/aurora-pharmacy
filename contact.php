@@ -49,7 +49,22 @@ include_once "header.php";
 
         } elseif($blnAttempted && inputExists($_POST['name']) && (inputExists($_POST['email']) || inputExists($_POST['phone'])) && inputExists($_POST['message'])) {
           // do stuff. Send email, spit out 'thanks' message
+          $strMessage = "New message received!\n\n";
+          $strMessage .= "----------------------\n\n";
+          $strMessage .= "Name: " . cleanInput($_POST['name']) . "\n";
+          $strMessage .= "Phone: " . cleanInput($_POST['phone']) . "\n";
+          $strMessage .= "Email: " . cleanInput($_POST['email']) . "\n";
+          $strMessage .= "Message: " . "\n\t" . wordwrap($_POST['message'], 75, "\n\t") . "\n";
+          
+          $strSubject = "New Aurora Pharmacy Message";
+          $strHeaders = "From: contact@maneks.net\n";
+          if(inputExists($_POST['email'])) $strHeaders .= "Reply-To: " . $_POST['email'] . "\n";
+          
+          mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
+          
           echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>';
+          
+          
         } else {
           // return the form w/ notes where there's missing information iff attempted
           include_once "form.php"; // uses $_POST and $blnAttempted
