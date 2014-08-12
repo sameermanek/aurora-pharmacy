@@ -1,4 +1,5 @@
 <?php
+$strName = 'Homepage';
 include_once "header.php";
 ?>
 
@@ -80,7 +81,7 @@ include_once "header.php";
     </div>
       <div class="row-fluid">
         <div class="col-md-4">
-          <h2>Hablamos Espa–ol</h2>
+          <h2>Hablamos Espa&ntilde;ol</h2>
           <p>Our professional staff is fluent in Spanish. We're ready to serve you, and we can answer any questions you may have.</p>
         </div><!--/span-->
         <div class="col-md-4">

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Aurora Pharmacy</title>
+    <title>Aurora Pharmacy<?php echo (isset($strName)? " | " . $strName : "") ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aurora Pharmacy is a locally-owned, independent pharmacy that has been
     serving the needs of patients for over 20 years.">
