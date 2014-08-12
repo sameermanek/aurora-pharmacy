@@ -7,20 +7,22 @@ include_once "header.php";
 <div class="jumbotron">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>We'll get back to you as soon as possible.<br />In case of emergency, call 911</p>
+    <p>We'll get back to you as soon as possible.<br />In case of emergency, call 911 immediately</p>
   </div>
 </div>
 
 <div class="container">
   <div class="row-fluid">
     <div class="col-md-8 col-md-offset-2 centered">
+        <div class="well well-lg">
         <h2>Contact Information</h2>
-      <table class="table-striped" width=100%>
-        <tr><td><p class="lead">Phone</p></td><td><a href="tel:+16308203360">(630) 820-3360</a></td></tr>
-        <tr><td><p class="lead">Fax</p></td><td><a href="tel:+16308206864">(630) 820-6864</a></td></tr>
-        <tr><td><p class="lead">Email</p></td><td><a href="mailto:contact@maneks.net">contact@maneks.net</a></td></tr>
-        <tr><td><p class="lead">Address</p></td><td><a href="https://www.google.com/maps/preview?q=475+N+Farnsworth+Ave,+Aurora,+IL&hl=en&ll=41.765406,-88.281133&spn=0.008819,0.01884&sll=39.739318,-89.266507&sspn=9.305214,19.291992&oq=475&hnear=475+N+Farnsworth+Ave,+Aurora,+Illinois+60505&t=m&z=16" target="_blank">475 N. Farnsworth Ave<br />Aurora, IL 60505</a></td></tr>
-      </table>
+          <table class="table-striped" width=100%>
+            <tr><td><p class="lead">Phone</p></td><td><a href="tel:+16308203360">(630) 820-3360</a></td></tr>
+            <tr><td><p class="lead">Fax</p></td><td><a href="tel:+16308206864">(630) 820-6864</a></td></tr>
+            <tr><td><p class="lead">Email</p></td><td><a href="mailto:contact@maneks.net">contact@maneks.net</a></td></tr>
+            <tr><td><p class="lead">Address</p></td><td><a href="https://www.google.com/maps/preview?q=475+N+Farnsworth+Ave,+Aurora,+IL&hl=en&ll=41.765406,-88.281133&spn=0.008819,0.01884&sll=39.739318,-89.266507&sspn=9.305214,19.291992&oq=475&hnear=475+N+Farnsworth+Ave,+Aurora,+Illinois+60505&t=m&z=16" target="_blank">475 N. Farnsworth Ave<br />Aurora, IL 60505</a></td></tr>
+          </table>
+        </div>
     </div>
   </div>
   <div class="row-fluid">
@@ -49,6 +51,11 @@ include_once "header.php";
                 <br />
                 <textarea class="form-control" rows="5" id="message" placeholder="Type your question here"></textarea>
             </div>
+            <p class="help-block">
+                Messages sent via this form are not encrypted.<br />
+                They are sent to the pharmacist as an email.<br />
+                Please call or stop by if you need to discuss any confidential or medically sensitive information with the pharmacist.
+            </p>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
     </div>
