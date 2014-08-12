@@ -15,9 +15,11 @@ include_once "header.php";
   <div class="row-fluid">
     <div class="col-lg-4 col-lg-offset-4 centered">
         <form role="form">
-            <input type="text" id="username" placeholder="username">
+            <div class="form-group">
+            <input type="text" id="username" placeholder="username" hidden="true">
                 <?php //fake username input to help catch bots (rather than using captcha)
                 ?>
+            </div>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" placeholder="Your name">
