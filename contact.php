@@ -22,7 +22,7 @@ include_once "header.php";
             </div>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" placeholder="Your name">
+                <input type="text" class="form-control" placeholder="Your name">
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
@@ -30,11 +30,12 @@ include_once "header.php";
             </div>
             <div class="form-group">
                 <label for="phone number">Phone Number</label>
-                <input type="tel" id="phone" placeholder="phone number">
+                <input type="tel" id="phone" class="form-control" placeholder="phone number">
             </div>
             <div class="form-group">
                 <label for="message">Message?</label>
-                <textarea id="message" placeholder="Type your question here"></textarea>
+                <br />
+                <textarea class="form-control" rows="5" id="message" placeholder="Type your question here"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
