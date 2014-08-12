@@ -33,7 +33,7 @@ include_once "header.php";
         //count(array_intersect(array_keys($_POST), array('name','email','phone','message'))) !== 0;
       
         // handle the form -- if it is good send emails, otherwise fill in whatever possible and flag error
-        if(isset($_POST['username'])) {
+        if(isset($_POST['username']) && $_POST['username'] != '') {
           //shut it down
           echo '<div class="alert alert-success" role="alert"><h2>Thanks [spammer]</h2><br />You should hear back soon</div>';
 
