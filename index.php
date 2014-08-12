@@ -22,7 +22,7 @@ include_once "header.php";
               Aurora, IL 60505<br>
               Phone: <a href="tel:+16308203360">(630) 820-3360</a><br>
               Fax: <a href="tel:+16308206864">(630) 820-6864</a><br>
-              Email: <a href="mailto:support@aurora-pharmacy.com">support@aurora-pharmacy.com</a>
+              Email: <a href="mailto:contact@maneks.net">contact@maneks.net</a>
             </address>
           </li>
           <hr/>
