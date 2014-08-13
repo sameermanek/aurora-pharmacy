@@ -55,7 +55,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li <?php if($_SERVER['PHP_SELF'] == 'contact.php') echo 'class="active"' else echo "class='".$_SERVER['PHP_SELF']."'"; ?> ><a href="../contact.php">Contact Us</a></li>
+                <li <?php if($_SERVER['PHP_SELF'] == 'contact.php') echo 'class="active"'; else echo "class='".$_SERVER['PHP_SELF']."'"; ?> ><a href="../contact.php">Contact Us</a></li>
             </ul>
         </div>
       </div>
