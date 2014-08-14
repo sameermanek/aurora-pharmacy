@@ -101,13 +101,7 @@ include_once "header.php";
     </div><!--/span-->
   </div><!--/row-->
 </div> <!-- /container -->
-<script type='text/javascript'>
-    $(document).ready(function() {
-         $('.carousel').carousel({
-             interval: 2000
-         })
-    });    
-</script>
+
 
 
 <?php

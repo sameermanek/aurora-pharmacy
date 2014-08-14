@@ -16,3 +16,9 @@ window.onresize=function(){
     var width = window.innerWidth;
     resizeMap(width)
 }
+
+$(document).ready(function() {
+     $('.carousel').carousel({
+         interval: 5000
+     })
+});    
