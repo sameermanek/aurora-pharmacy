@@ -47,7 +47,7 @@ include_once "header.php";
         
         function checkPhoneNumber($strData) {
             $arr = array(); // old versions of php seem to require all three parameters
-            return preg_match_all('/[0-9]/', $strData, $arr);
+            return (preg_match_all('/[0-9]/', $strData, $arr) >= 7);
         }
         
 
