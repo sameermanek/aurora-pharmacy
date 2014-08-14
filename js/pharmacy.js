@@ -10,15 +10,12 @@ resizeMap=function(width){
 window.onload=function(){
     var width = window.innerWidth;
     resizeMap(width)
+    $('.carousel').carousel({
+         interval: 5000
+     })
 };
 
 window.onresize=function(){
     var width = window.innerWidth;
     resizeMap(width)
 }
-
-$(document).ready(function() {
-     $('.carousel').carousel({
-         interval: 5000
-     })
-});    
