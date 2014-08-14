@@ -35,9 +35,20 @@ include_once "header.php";
           $data = htmlspecialchars($data);
           return $data;
         }
+        
         function inputExists($data) {
           return !is_null($data) && trim($data) != "";
         }
+
+        
+        function validateEmail($strData) {
+            return filter_var($strData, FILTER_VALIDATE_EMAIL);
+        }
+        
+        function checkPhoneNumber($strData) {
+            return (bool) preg_match_all('/[0-9]/', $data) >= 7;
+        }
+        
 
         $blnAttempted = $_SERVER["REQUEST_METHOD"] == "POST";
         //count(array_intersect(array_keys($_POST), array('name','email','phone','message'))) !== 0;
@@ -45,24 +56,32 @@ include_once "header.php";
         // handle the form -- if it is good send emails, otherwise fill in whatever possible and flag error
         if($blnAttempted && inputExists($_POST['username'])) {
           //shut it down
-          echo '<div class="alert alert-success" role="alert"><h2>Thanks [spammer]</h2><br />You should hear back soon</div>';
+          echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br /></div>';
 
-        } elseif($blnAttempted && inputExists($_POST['name']) && (inputExists($_POST['email']) || inputExists($_POST['phone'])) && inputExists($_POST['message'])) {
+        } elseif($blnAttempted && inputExists($_POST['name']) && (validateEmail($_POST['email']) || checkPhoneNumber($_POST['phone'])) && inputExists($_POST['message'])) {
           // do stuff. Send email, spit out 'thanks' message
           $strMessage = "New message received!\n\n";
           $strMessage .= "----------------------\n\n";
           $strMessage .= "Name: " . cleanInput($_POST['name']) . "\n";
-          $strMessage .= "Phone: " . cleanInput($_POST['phone']) . "\n";
-          $strMessage .= "Email: " . cleanInput($_POST['email']) . "\n";
-          $strMessage .= "Message: " . "\n\t" . wordwrap($_POST['message'], 75, "\n\t") . "\n";
+          if(checkPhoneNumber($_POST['phone'])) $strMessage .= "Phone: " . cleanInput($_POST['phone']) . "\n";
+          if(validateEmail($_POST['email'])) $strMessage .= "Email: " . validateEmail($_POST['email']) . "\n";
+          $strMessage .= "Message: " . "\n\t" . wordwrap(cleanInput($_POST['message']), 75, "\n\t") . "\n";
           
           $strSubject = "New Aurora Pharmacy Message";
           $strHeaders = "From: contact@maneks.net\n";
           if(inputExists($_POST['email'])) $strHeaders .= "Reply-To: " . $_POST['email'] . "\n";
           
-          $blnSuccess = mail('sameer.manek@gmail.com', $strSubject, $strMessage, $strHeaders) && mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
+          $blnSuccess = mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
           
-          if($blnSuccess) echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>'; else echo '<div class="alert alert-info" role="alert"> Something failed.</div>';
+          if(!$blnSuccess) {
+            mail('support@maneks.net', 'Aurora Pharmacy website failed to send message', $strHeaders . '\n\n' . $strSubject . '\n\n' . $strMessage);
+          }
+          
+          if($blnSuccess) {
+            echo '<div class="alert alert-success" role="alert"><h2>Thanks</h2><br />You should hear back soon</div>';
+          } else {
+            echo '<div class="alert alert-info" role="alert"><h2>Something went wrong</h2><br />Sorry about that -- we had some trouble sending your message.<br />Please call or email the pharmacist directly<br />The webmaster has been notified of the issue</div>';
+          }
           
         
           
