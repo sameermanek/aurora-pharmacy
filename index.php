@@ -18,8 +18,10 @@ include_once "header.php";
           <li class="nav-header"><strong>Contact Information</strong></li>
           <li>
             <address>
-              475 N Farnsworth Ave<br>
-              Aurora, IL 60505<br>
+              <a href="https://www.google.com/maps/preview?q=475+N+Farnsworth+Ave,+Aurora,+IL&hl=en&ll=41.765406,-88.281133&spn=0.008819,0.01884&sll=39.739318,-89.266507&sspn=9.305214,19.291992&oq=475&hnear=475+N+Farnsworth+Ave,+Aurora,+Illinois+60505&t=m&z=16" target="_blank">
+                475 N Farnsworth Ave<br>
+                Aurora, IL 60505<br>
+              </a>
               Phone: <a href="tel:+16308203360">(630) 820-3360</a><br>
               Fax: <a href="tel:+16308206864">(630) 820-6864</a><br>
               Email: <a href="mailto:contact@maneks.net">contact@maneks.net</a>
