@@ -6,7 +6,7 @@ include_once "header.php";
 <div class="jumbotron">
   <div class="container">
     <h1>Aurora Pharmacy</h1>
-    <p>Your trusted neighborhood pharmacy</p>
+    <p>Compare our prices and service</p>
   </div>
 </div>
 
@@ -84,14 +84,15 @@ include_once "header.php";
       <div class="row-fluid">
         <div class="col-md-4">
           <h2>Hablamos Espa&ntilde;ol</h2>
-          <p>Our professional staff is fluent in Spanish. We're ready to serve you, and we can answer any questions you may have.</p>
+          <p>Our professional staff is fluent in Spanish. We're ready to serve you, and we can answer any questions you may have.<br />
+          Acceptamos la mayora de seguros medicos incluyendo Medicaid y Medicare Parte D.</p>
         </div><!--/span-->
         <div class="col-md-4">
           <h2>Great Service</h2>
           <p>
             Aurora Pharmacy is a family business that has proudly served Aurora since 1993.
             We're locally owned and operated, and we'll go out of our way to make you happy.
-            Every patient is important to us, so we take special care to ensure you're taken care of.</p>
+            We accept most insurance plans including Medicaid and Medicare Part D</p>
         </div><!--/span-->
         <div class="col-md-4">
           <h2>Free Delivery</h2>
