@@ -12,7 +12,7 @@ include_once "header.php";
 
 <div class="container">
   <div class="row-fluid">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <div class="well sidebar-nav">
         <ul class="nav nav-list">
           <li class="nav-header"><strong>Contact Information</strong></li>
@@ -50,7 +50,7 @@ include_once "header.php";
         </ul>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8">
       <div id="carousel" class="carousel slide" data-rise="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
