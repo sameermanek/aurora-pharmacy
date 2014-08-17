@@ -19,7 +19,7 @@ include_once "header.php";
           <table class="table-striped" width=100%>
             <tr><td><p class="lead">Phone</p></td><td><a href="tel:+16308203360">(630) 820-3360</a></td></tr>
             <tr><td><p class="lead">Fax</p></td><td><a href="tel:+16308206864">(630) 820-6864</a></td></tr>
-            <tr><td><p class="lead">Email</p></td><td><a href="mailto:contact@maneks.net">contact@maneks.net</a></td></tr>
+            <tr><td><p class="lead">Email</p></td><td><a href="mailto:contact@aurora-pharmacy.com">contact@aurora-pharmacy.com</a></td></tr>
             <tr><td><p class="lead">Address</p></td><td><a href="https://www.google.com/maps/preview?q=475+N+Farnsworth+Ave,+Aurora,+IL&hl=en&ll=41.765406,-88.281133&spn=0.008819,0.01884&sll=39.739318,-89.266507&sspn=9.305214,19.291992&oq=475&hnear=475+N+Farnsworth+Ave,+Aurora,+Illinois+60505&t=m&z=16" target="_blank">475 N. Farnsworth Ave<br />Aurora, IL 60505</a></td></tr>
           </table>
         </div>
@@ -69,13 +69,13 @@ include_once "header.php";
           $strMessage .= "Message: " . "\n\t" . wordwrap(cleanInput($_POST['message']), 75, "\n\t") . "\n";
           
           $strSubject = "New Aurora Pharmacy Message";
-          $strHeaders = "From: contact@maneks.net\n";
+          $strHeaders = "From: contact@aurora-pharmac.com\n";
           if(inputExists($_POST['email'])) $strHeaders .= "Reply-To: " . $_POST['email'] . "\n";
           
-          $blnSuccess = mail('contact@maneks.net', $strSubject, $strMessage, $strHeaders);
+          $blnSuccess = mail('contact@aurora-pharmacy.com', $strSubject, $strMessage, $strHeaders);
           
           if(!$blnSuccess) {
-            mail('support@maneks.net', 'Aurora Pharmacy website failed to send message', $strHeaders . '\n\n' . $strSubject . '\n\n' . $strMessage);
+            mail('support@aurora-pharmacy.com', 'Aurora Pharmacy website failed to send message', $strHeaders . '\n\n' . $strSubject . '\n\n' . $strMessage);
           }
           
           if($blnSuccess) {
