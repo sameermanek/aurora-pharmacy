@@ -1,4 +1,0 @@
-AuthName "Aurora Pharmacy Homepage"
-AuthType Basic
-AuthUserFile /home/aurorap/.htpasswd
-Require valid-user
