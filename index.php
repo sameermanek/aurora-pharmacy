@@ -84,7 +84,7 @@ include_once "header.php";
       <div class="row-fluid">
         <div class="col-md-4">
           <h2>Hablamos Espa&ntilde;ol</h2>
-          <p>Our professional staff is fluent in Spanish. We're ready to serve you, and we can answer any questions you may have.<br />
+          <p>Nuestras empleadas hablan Espa&ntilde;ol. Estamos listos para ayudarles en cualquier pregunta que tengan.<br />
           Acceptamos la mayora de seguros medicos incluyendo Medicaid y Medicare Parte D.</p>
         </div><!--/span-->
         <div class="col-md-4">
@@ -98,7 +98,7 @@ include_once "header.php";
           <h2>Free Delivery</h2>
           <p>We're pleased to offer free delivery. Call for details.</p>
           <br />
-          <p><em>[translate above to spanish?]</em></p>
+          <p><em>Ofrecemos entrega a domicilio gratis. Llamar para mas informacion</em></p>
         </div><!--/span-->
       </div><!--/row-->
     </div><!--/span-->
