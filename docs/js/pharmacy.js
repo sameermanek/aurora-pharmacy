@@ -9,7 +9,7 @@ resizeMap=function(width){
 
 window.onload=function(){
     var width = window.innerWidth;
-    resizeMap(width)
+    //resizeMap(width)
     $('.carousel').carousel({
          interval: 5000
      })
@@ -17,5 +17,5 @@ window.onload=function(){
 
 window.onresize=function(){
     var width = window.innerWidth;
-    resizeMap(width)
+    //resizeMap(width)
 }
